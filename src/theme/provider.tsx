@@ -7,8 +7,8 @@ import {
   createTheme,
   ThemeProvider as MuiThemeProvider,
 } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 import type {} from "@mui/material/themeCssVarsAugmentation";
-import { CssBaseline } from "@mui/material";
 
 interface ThemeProviderProps {
   children: React.ReactNode;
