@@ -8,6 +8,7 @@ import {
   ThemeProvider as MuiThemeProvider,
 } from "@mui/material/styles";
 import type {} from "@mui/material/themeCssVarsAugmentation";
+import { CssBaseline } from "@mui/material";
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -24,7 +25,10 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   return (
     <AppRouterCacheProvider>
       <InitColorSchemeScript attribute="data" />
-      <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </MuiThemeProvider>
     </AppRouterCacheProvider>
   );
 }
